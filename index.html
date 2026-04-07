@@ -1,198 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Reading World</title>
 
-<link rel="stylesheet" href="style.css">
-
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Merriweather&display=swap" rel="stylesheet">
 
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- NAVBAR -->
-
 <nav>
-
-<h2 class="logo">📚 ReadingWorld</h2>
-
-<div class="menu">
-
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Books</a>
-<a href="#">Favourites</a>
-<a href="#">Contact</a>
-
-<button onclick="toggleDark()">🌙</button>
-
-</div>
-
+  <h2 class="logo">📚 ReadingWorld</h2>
+  <div class="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#books">Books</a>
+    <a href="#favourites">Favourites</a>
+    <a href="#contact">Contact</a>
+    <button onclick="toggleDark()">🌙</button>
+  </div>
 </nav>
 
-
-
 <!-- HERO -->
-
-<section class="hero">
-
-<h1>Explore the Magic of Reading</h1>
-
-<p>Discover stories, knowledge and imagination</p>
-
-<button>Start Reading</button>
-
+<section id="home" class="hero">
+  <h1>Explore the Magic of Reading</h1>
+  <p>Discover stories, knowledge, and imagination</p>
+  <button onclick="scrollToSection('books')">Start Reading</button>
 </section>
-
-
 
 <!-- ABOUT -->
-
-<section class="about">
-
-<h2>About Our Book Business</h2>
-
-<p>
-
-ReadingWorld is a website for book lovers.
-We share famous novels, stories and educational books.
-Reading helps improve imagination and creativity.
-
-</p>
-
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>ReadingWorld is a platform for book lovers. We provide books, reviews, and guides to improve reading habits.</p>
 </section>
-
-
 
 <!-- BOOKS -->
+<section id="books" class="services">
+  <h2>Popular Books</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f" alt="Harry Potter">
+      <h3>Harry Potter</h3>
+      <p>A magical story of a young wizard.</p>
+      <button onclick="openModal('modal1')">Read More</button>
+    </div>
 
-<section class="services">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Romeo and Juliet">
+      <h3>Romeo and Juliet</h3>
+      <p>A famous love story by Shakespeare.</p>
+      <button onclick="openModal('modal2')">Read More</button>
+    </div>
 
-<h2>Popular Books</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f">
-
-<h3>Harry Potter</h3>
-
-<p>A magical story of a young wizard.</p>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
-
-<h3>Romeo and Juliet</h3>
-
-<p>A famous love story by Shakespeare.</p>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
-
-<h3>Rich Dad Poor Dad</h3>
-
-<p>A book about money and success.</p>
-
-</div>
-
-
-</div>
-
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Rich Dad Poor Dad">
+      <h3>Rich Dad Poor Dad</h3>
+      <p>A book about money and success.</p>
+      <button onclick="openModal('modal3')">Read More</button>
+    </div>
+  </div>
 </section>
-
-
 
 <!-- FAVOURITE BOOKS -->
+<section id="favourites" class="services">
+  <h2>Favourite Books</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d" alt="The Alchemist">
+      <h3>The Alchemist</h3>
+      <p>A story about dreams and goals.</p>
+      <button onclick="openModal('modal4')">Read More</button>
+    </div>
 
-<section class="services">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1473755504818-b72b6dfdc226" alt="Think and Grow Rich">
+      <h3>Think and Grow Rich</h3>
+      <p>Motivation and success book.</p>
+      <button onclick="openModal('modal5')">Read More</button>
+    </div>
 
-<h2>Favourite Books</h2>
-
-<div class="cards">
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d">
-
-<h3>The Alchemist</h3>
-
-<p>A story about dreams and goals.</p>
-
-</div>
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1473755504818-b72b6dfdc226">
-
-<h3>Think and Grow Rich</h3>
-
-<p>Motivation and success book.</p>
-
-</div>
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
-
-<h3>Atomic Habits</h3>
-
-<p>Learn how to build good habits.</p>
-
-</div>
-
-
-</div>
-
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Atomic Habits">
+      <h3>Atomic Habits</h3>
+      <p>Learn how to build good habits.</p>
+      <button onclick="openModal('modal6')">Read More</button>
+    </div>
+  </div>
 </section>
-
-
 
 <!-- CONTACT -->
-
-<section class="contact">
-
-<h2>Contact Us</h2>
-
-<p>Email: readingworld@email.com</p>
-
-<p>Follow us for book updates</p>
-
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: readingworld@email.com</p>
+  <p>Follow us for book updates</p>
 </section>
 
-
-
 <!-- FOOTER -->
-
 <footer>
-
-<p>© 2026 Reading World</p>
-
+  <p>© 2026 Reading World</p>
 </footer>
 
+<!-- MODALS -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Harry Potter</h2>
+    <p>Harry Potter is a series of fantasy novels written by J.K. Rowling. It follows the adventures of a young wizard, Harry, and his friends at Hogwarts School of Witchcraft and Wizardry.</p>
+  </div>
+</div>
 
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h2>Romeo and Juliet</h2>
+    <p>Romeo and Juliet is a tragic love story written by William Shakespeare, about two young lovers from feuding families in Verona, Italy.</p>
+  </div>
+</div>
 
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <h2>Rich Dad Poor Dad</h2>
+    <p>This book by Robert Kiyosaki teaches financial education and money management skills, comparing lessons from his "rich dad" and "poor dad".</p>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <h2>The Alchemist</h2>
+    <p>The Alchemist by Paulo Coelho is a philosophical book about following your dreams and listening to your heart.</p>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal5')">&times;</span>
+    <h2>Think and Grow Rich</h2>
+    <p>Written by Napoleon Hill, this book teaches principles of success and positive thinking to achieve personal and financial goals.</p>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal6')">&times;</span>
+    <h2>Atomic Habits</h2>
+    <p>Atomic Habits by James Clear explains how small changes in daily habits can lead to remarkable results over time.</p>
+  </div>
+</div>
+
+<!-- JS -->
 <script src="script.js"></script>
-\body>
+</body>
 </html>

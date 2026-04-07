@@ -1,186 +1,164 @@
+/* GENERAL */
 body{
-
-margin:0;
-font-family:Poppins;
-background:white;
-color:black;
-
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:white;
+  color:black;
+  scroll-behavior:smooth;
 }
-
-
 
 /* NAVBAR */
-
 nav{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#4E342E;
-color:white;
-padding:15px 40px;
-
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#4E342E;
+  color:white;
+  padding:15px 40px;
 }
-
 .logo{
-
-font-family:Merriweather;
-font-size:24px;
-
+  font-family:Merriweather, serif;
+  font-size:24px;
 }
-
 .menu a{
-
-color:white;
-margin-left:20px;
-text-decoration:none;
-
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:500;
 }
-
 .menu button{
-
-margin-left:20px;
-padding:5px 10px;
-cursor:pointer;
-
+  margin-left:20px;
+  padding:5px 10px;
+  cursor:pointer;
 }
-
-
 
 /* HERO */
-
 .hero{
-
-text-align:center;
-padding:80px 20px;
-background:#EFEBE9;
-
+  text-align:center;
+  padding:80px 20px;
+  background:#EFEBE9;
 }
-
 .hero h1{
-
-font-size:40px;
-
+  font-size:40px;
 }
-
-button{
-
-padding:10px 20px;
-background:#6D4C41;
-color:white;
-border:none;
-cursor:pointer;
-
+.hero button{
+  padding:10px 20px;
+  background:#6D4C41;
+  color:white;
+  border:none;
+  cursor:pointer;
 }
-
-
 
 /* SECTIONS */
-
-.about,.contact{
-
-padding:40px;
-text-align:center;
-
+.about, .contact{
+  padding:40px;
+  text-align:center;
 }
 
-
-
-/* BOOK CARDS */
-
+/* CARDS */
 .services{
-
-padding:40px;
-text-align:center;
-
+  padding:40px;
+  text-align:center;
 }
-
 .cards{
-
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
-
 .card{
-
-width:250px;
-background:white;
-padding:15px;
-box-shadow:0 0 10px gray;
-border-radius:10px;
-
+  width:250px;
+  background:white;
+  padding:15px;
+  box-shadow:0 0 10px gray;
+  border-radius:10px;
+  transition: transform 0.3s;
 }
-
+.card:hover{
+  transform: translateY(-5px);
+}
 .card img{
-
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:10px;
-
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
 }
-
-
+.card button{
+  margin-top:10px;
+  padding:8px 15px;
+  background:#6D4C41;
+  color:white;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+}
 
 /* FOOTER */
-
 footer{
-
-background:#4E342E;
-color:white;
-text-align:center;
-padding:15px;
-
+  background:#4E342E;
+  color:white;
+  text-align:center;
+  padding:15px;
 }
 
-
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  z-index:100;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgba(0,0,0,0.7);
+}
+.modal-content{
+  background:white;
+  margin:10% auto;
+  padding:20px;
+  border-radius:10px;
+  width:80%;
+  max-width:500px;
+  text-align:center;
+  position:relative;
+}
+.modal-content h2{
+  margin-top:0;
+}
+.close{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:28px;
+  cursor:pointer;
+}
 
 /* DARK MODE */
-
 .dark{
-
-background:#121212;
-color:white;
-
+  background:#121212;
+  color:white;
 }
-
 .dark nav{
-
-background:black;
-
+  background:black;
 }
-
 .dark .card{
-
-background:#1e1e1e;
-
+  background:#1e1e1e;
 }
-
 .dark footer{
-
-background:black;
-
+  background:black;
 }
-
-
+.dark .modal-content{
+  background:#1e1e1e;
+  color:white;
+}
 
 /* MOBILE */
-
 @media(max-width:768px){
-
-nav{
-
-flex-direction:column;
-
-}
-
-.hero h1{
-
-font-size:28px;
-
-}
-
+  nav{
+    flex-direction:column;
+  }
+  .hero h1{
+    font-size:28px;
+  }
 }
